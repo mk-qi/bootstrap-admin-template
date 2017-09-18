@@ -1,0 +1,36 @@
+@import "wrapperheader.css";
+@import "wrappersiderbar.css";
+
+/*********************************************************/
+/*                 Layout Styles                         */
+/*********************************************************/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 48px;
+}
+
+/*********************************************************/
+/*                 Template Layout                       */
+/*********************************************************/
+#wrapper:before,
+#wrapper-header:before,
+#wrapper:after,
+#wrapper-header:after,
+{
+  content: " ";
+  display: table;
+  clear: both;
+}
+#wrapper {
+  margin: 0 auto;
+  position: relative;
+}
+#wrapper-content{
+  margin: 0 auto;
+  position: relative;
+}

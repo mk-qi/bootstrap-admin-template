@@ -1,0 +1,7 @@
+#wrapper-siderbar {
+  transition: all 0.3s ease-in-out;
+  width: 250px;
+  background: #53619d;
+  height:100vh;
+  position: absolute;
+}
