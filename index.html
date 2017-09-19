@@ -20,7 +20,13 @@
 
    		<!-- Theme style -->
    		<link rel="stylesheet" href="dist/css/admin-pages.css">
+<script type="text/javascript">
+	$("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("active");
+});
 
+</script>
 
    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,15 +39,18 @@
 <body>
 
 <div id="wrapper" class="active">
+	<header id=wrapper-header>
 
-	<div id=wrapper-header>
  	 	<!-- begin navbar -->
- 		<nav class="navbar navbar-default navbar-static-top" role="navigation">
- 			<div class="container-fluid">
+ 			<nav class="navbar navbar-default navbar-static-top" role="navigation">
+	 		 	<div class="container-fluid">
 		 			 <!-- Brand and toggle get grouped for better mobile display -->
 		      <header class="navbar-header">
 		      		<a href="index.html" class="navbar-brand">example project</a>
 		      </header>
+					<div class="topnav">
+					 
+		      </div>
 	 			  <div class="collapse navbar-collapse navbar-ex1-collapse">
 				    <!-- .nav -->
 				    <ul class="nav navbar-nav">
@@ -56,35 +65,77 @@
 				                <li><a href="#">Item1</a></li>
 				            </ul>
 				        </li>
+				        <li>
+
+				        		   
+	
+				        </li>
 				    </ul>
+				     <ul class="nav navbar-nav navbar-right">
+      						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      						<li><a id="menu-toggle" href="#"><span class="glyphicon glyphicon-align-justify"></span>Menu</a>
+
+      						</li>
+    						</ul>
 				    <!-- /.nav -->
 				  </div>
-			</div> <!-- /.container-fluid -->		
- 		 </nav> <!-- end navbar -->
-		
-	</div>
-	
-	<div id ="wrapper-siderbar"> 
-		<div class="container-fluid">
-			<ul>
-				<li>
-					this is menu 1
-				</li>
-				<li>
-					this is menu 2
-				</li>
-			</ul>
+				</div>
+   			<!-- /.container-fluid -->
+ 		  </nav>
+			<!-- end navbar -->
 			
-		</div>
-	</div>
+	</header>
 	
-  <div id="wrapper-content" class="content">
-	 	
-            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
-                <i class="glyphicon glyphicon-align-left"></i>
-                Toggle Sidebar
-            </button>
+	<aside id ="wrapper-sidebar">
+	 <!-- sidebar: style can be found in sidebar.less -->
+    	<section class="sidebar"> 
 
+    		 <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">HEADER</li>
+        <!-- Optionally, you can add icons to the links -->
+        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
+        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#">Link in level 2</a></li>
+            <li><a href="#">Link in level 2</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- /.sidebar-menu -->
+		
+
+		</section>
+	</aside>
+	
+		 <div class="clearfix"> </div>
+
+  <div id="wrapper-content">
+		 <!-- Content Header (Page header) -->
+    <section class="content-header">
+      	 <ol class="breadcrumb">
+        	<li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+        	<li class="active">Here</li>
+      	</ol>
+    </section>
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+      <!--------------------------
+        | Your Page Content Here |
+        -------------------------->
+
+        here is contnet 
+
+    </section>
+    <!-- /.content -->
 
   </div>
 </div>

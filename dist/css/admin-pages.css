@@ -5,9 +5,13 @@
 /*                 Layout Styles                         */
 /*********************************************************/
 
+html,body{
+ height:100%
+} 
 html {
   position: relative;
   min-height: 100%;
+
 }
 body {
   /* Margin bottom by footer height */
@@ -17,20 +21,29 @@ body {
 /*********************************************************/
 /*                 Template Layout                       */
 /*********************************************************/
-#wrapper:before,
-#wrapper-header:before,
-#wrapper:after,
-#wrapper-header:after,
-{
-  content: " ";
-  display: table;
-  clear: both;
-}
+
 #wrapper {
-  margin: 0 auto;
+  overflow: :hide;
   position: relative;
+  width: 100%;        
+
 }
-#wrapper-content{
-  margin: 0 auto;
-  position: relative;
+#wrapper-header  {
+  
+}
+#wrapper-sidebar {
+  transition: all 0.3s ease-in-out;
+  width: 200px;
+  background: #53619d;
+  height:900px;
+  display: block;
+  position:absolute;
+} 
+
+#wrapper-content {
+	margin-left: 200px;
+	z-index: 820;
+}
+#wrapper.active {
+   
 }
