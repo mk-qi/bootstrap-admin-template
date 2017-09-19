@@ -28,8 +28,8 @@ body {
   margin-bottom: 0;
 }
 #sidebar {
-  min-width: 200px;
-  max-width: 200px;
+  min-width: 0px;
+  max-width: 0px;
   min-height: 100vh;
   background: #53619d;
 } 
@@ -39,8 +39,8 @@ body {
 }
 
 #sidebar.active {
-    min-width: 60px;
-    max-width: 60px;
+    min-width: 40px;
+    max-width: 40px;
     text-align: center;
 }
 
