@@ -20,13 +20,6 @@
 
    		<!-- Theme style -->
    		<link rel="stylesheet" href="dist/css/admin-pages.css">
-<script type="text/javascript">
-	$("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("active");
-});
-
-</script>
 
    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,9 +30,7 @@
 
 </head>
 <body>
-
-<div id="wrapper" class="active">
-	<header id=wrapper-header>
+<header id=header>
 
  	 	<!-- begin navbar -->
  			<nav class="navbar navbar-default navbar-static-top" role="navigation">
@@ -66,7 +57,7 @@
 				            </ul>
 				        </li>
 				        <li>
-
+							
 				        		   
 	
 				        </li>
@@ -74,10 +65,8 @@
 				     <ul class="nav navbar-nav navbar-right">
       						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      						<li><a id="menu-toggle" href="#"><span class="glyphicon glyphicon-align-justify"></span> Menu</a>
-
-      						</li>
-    						</ul>
+      						<li><a href="#"  id="sidebarCollapse"><span class="glyphicon glyphicon-align-justify">Menu</span></a></li>
+    				</ul>
 				    <!-- /.nav -->
 				  </div>
 				</div>
@@ -86,19 +75,18 @@
 			<!-- end navbar -->
 			
 	</header>
-	
-	<aside id="wrapper-sidebar">
+<main id="wrapper">
+	<aside id="sidebar">
 	 <!-- sidebar: style can be found in sidebar.less -->
-    	<section class="sidebar"> 
-
-
+    <section class="sidebar"> 
 		</section>
 	</aside>
-	
-		 <div class="clearfix"> </div>
+  <article id="content">
 
-  <div id="wrapper-content">
-		 <!-- Content Header (Page header) -->
+  
+	
+
+	<!-- Content Header (Page header) -->
     <section class="content-header">
       	 <ol class="breadcrumb">
         	<li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
@@ -117,19 +105,28 @@
     </section>
     <!-- /.content -->
 
-  </div>
-</div>
-    	
-    <!-- jQuery 3 -->
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<!-- Bootstrap 3.3.7 -->
-	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<!-- admin-pages -js-->
-	<script src="dist/js/admin-pages.js"></script>
-	<script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
-   
+  </article>
+</main>
+
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- admin-pages -js-->
+<script src="dist/js/admin-pages.js"></script>
+<script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>   
+
+
+<script type="text/javascript">
+     $(document).ready(function () {
+         $('#sidebarCollapse').on('click', function () {
+              $('#sidebar').toggleClass('active');
+           });
+      });
+</script>
 </body>
- </html>
+</html>
 
 
 

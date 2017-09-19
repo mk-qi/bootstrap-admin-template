@@ -1,6 +1,3 @@
-@import "wrapperheader.css";
-@import "wrappersiderbar.css";
-
 /*********************************************************/
 /*                 Layout Styles                         */
 /*********************************************************/
@@ -17,32 +14,33 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 48px;
 }
-
 /*********************************************************/
 /*                 Template Layout                       */
 /*********************************************************/
 
 #wrapper {
-  overflow: :hide;
-  position: relative;
+  display: flex;
+  align-items: stretch;
   width: 100%;        
 
 }
-#wrapper-header  {
-  
+#header .navbar {
+  margin-bottom: 0;
 }
-#wrapper-sidebar {
-  transition: all 0.3s ease-in-out;
-  width: 200px;
+#sidebar {
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 100vh;
   background: #53619d;
-  height:900px;
-  display: block;
-  position:absolute;
 } 
 
-#wrapper-content {
-	margin-left: 200px;
+#content {
+  width:100%;
 }
-#wrapper.active {
-   
+
+#sidebar.active {
+    min-width: 60px;
+    max-width: 60px;
+    text-align: center;
 }
+
