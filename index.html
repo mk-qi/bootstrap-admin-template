@@ -17,7 +17,6 @@
    		<link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
    		<!-- metisMenu -- >
    		<link rel="stylesheet" href="bower_components/metisMenu/dist/metisMenu.min.css" >
-
    		<!-- Theme style -->
    		<link rel="stylesheet" href="dist/css/admin-pages.css">
 
@@ -49,24 +48,35 @@
 				        <li><a href="#">Capacity</a></li>
 				        <li class='dropdown '>
 				            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-				                billlist <b class="caret"></b>
+				                Project<b class="caret"></b>
 				            </a>
 				            <ul class="dropdown-menu">
 				                <li><a href="#">Item1</a></li>
 				                <li><a href="#">Item2</a></li>
 				            </ul>
 				        </li>
-				        <li>
-							
-				        		   
-	
-				        </li>
+				      
 				    </ul>
 				     <ul class="nav navbar-nav navbar-right">
-      						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      						<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      						<li><a href="#"  id="sidebarCollapse"><span class="glyphicon glyphicon-align-justify">Menu</span></a></li>
-    				</ul>
+      					<!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+
+        				 <!-- /.dropdown -->
+                 <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">  
+                      <span class="hidden-xs">Alexander Pierce</span> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                      <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile </a></li>
+                      <li class="divider"></li>
+                      <li><a href="{{ url_for('admin.logout_view') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+                      <li><a href="#"><span class="fa fa-sign-in fa-fw"></span> Login</a></li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                  </li>
+                  <!-- /.dropdown -->
+                   <li><a href="#" id="sidebarCollapse"><span class="glyphicon glyphicon-align-justify"></span> Menu</a></li>
+
 				    <!-- /.nav -->
 				  </div>
 				</div>
@@ -83,9 +93,6 @@
 	</aside>
   <article id="content">
 
-  
-	
-
 	<!-- Content Header (Page header) -->
     <section class="content-header">
       	 <ol class="breadcrumb">
@@ -95,7 +102,6 @@
     </section>
     <!-- Main content -->
     <section class="content container-fluid">
-
       <!--------------------------
         | Your Page Content Here |
         -------------------------->
@@ -116,8 +122,6 @@
 <!-- admin-pages -js-->
 <script src="dist/js/admin-pages.js"></script>
 <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>   
-
-
 <script type="text/javascript">
      $(document).ready(function () {
          $('#sidebarCollapse').on('click', function () {
