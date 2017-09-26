@@ -68,7 +68,7 @@
                     <ul class="dropdown-menu dropdown-user">
                       <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile </a></li>
                       <li class="divider"></li>
-                      <li><a href="{{ url_for('admin.logout_view') }}"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+                      <li><a href=""><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
                       <li><a href="#"><span class="fa fa-sign-in fa-fw"></span> Login</a></li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -86,13 +86,25 @@
 	</header>
 <main id="wrapper">
 	<aside id="sidebar" class="navbar-default sidebar" role="navigation" data-widget="tree">
-			
+		        <li class="sidebar-title"><span>NAVIGATION</span></li>
+
 			    <div class="sidebar-nav navbar-collapse">
-			        <ul class="nav" id="side-menu">
-			           <li><a id="menu-toggle" href="#" ><i class="glyphicon glyphicon-align-justify fa-fw"></i>Menu</a></li>
+			        <ul class="nav" id="side-menu" data-widget="tree">
+			           <li><a href="#" ><i class="glyphicon glyphicon-align-justify fa-fw"></i> Menu</a></li>
 			           <li><a href="{}"><i class="fa fa-dashboard fa-fw"></i> Dash</a></li>
 			           <li><a href=""><i class="fa fa-table fa-fw"></i> Tables</a></li>
 			           <li><a href=""><i class="fa fa-edit fa-fw"></i> Forms</a></li>
+			           <li class="treeview">
+          					<a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+            					<span class="pull-right-container">
+                					<i class="fa fa-angle-left pull-right"></i>
+              					</span>
+          					</a>
+          					<ul class="treeview-menu">
+            					<li><a href="#">Link in level 2</a></li>
+            					<li><a href="#">Link in level 2</a></li>
+         					</ul>
+        				</li>
 			        </ul>
 			    </div>           
 			        <!-- /.sidebar-collapse -->
